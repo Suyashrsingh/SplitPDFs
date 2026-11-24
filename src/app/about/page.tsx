@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { GitHubIcon, LinkedInIcon, InstagramIcon } from '@/components/SocialIcons';
 
 export const metadata: Metadata = {
   title: 'About SplitPDFs – Built by Mahesh Mailapure & Suyash Singh',
@@ -57,7 +58,12 @@ export default function AboutPage() {
           'name': 'Suyash Singh',
           'jobTitle': 'Co-Founder & Lead Systems Engineer',
           'description': 'Software engineer specializing in high-performance browser WebAssembly, client-side binary manipulation, and zero-upload security.',
-          'knowsAbout': ['WebAssembly', 'Binary Data Manipulation', 'TypeScript', 'Client-Side Systems']
+          'knowsAbout': ['WebAssembly', 'Binary Data Manipulation', 'TypeScript', 'Client-Side Systems'],
+          'sameAs': [
+            'https://github.com/Suyashrsingh',
+            'https://www.linkedin.com/in/suyash-rishi-singh-6bb18b289',
+            'https://www.instagram.com/suyashsingh08'
+          ]
         }
       ]
     }
@@ -173,6 +179,39 @@ export default function AboutPage() {
                   <div className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 mt-1 uppercase tracking-wide">
                     <Code2 className="w-3.5 h-3.5" />
                     <span>Systems & Software Engineer</span>
+                  </div>
+                  {/* Social Media Profiles */}
+                  <div className="flex items-center gap-2 mt-3">
+                    <a
+                      href="https://github.com/Suyashrsingh"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Suyash Singh on GitHub"
+                      className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-600 transition-all hover:scale-110 shadow-xs"
+                      title="GitHub Profile"
+                    >
+                      <GitHubIcon className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/suyash-rishi-singh-6bb18b289"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Suyash Singh on LinkedIn"
+                      className="p-1.5 rounded-lg bg-slate-100 hover:bg-[#0a66c2] hover:text-white text-slate-600 transition-all hover:scale-110 shadow-xs"
+                      title="LinkedIn Profile"
+                    >
+                      <LinkedInIcon className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/suyashsingh08"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Suyash Singh on Instagram"
+                      className="p-1.5 rounded-lg bg-slate-100 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white text-slate-600 transition-all hover:scale-110 shadow-xs"
+                      title="Instagram Profile"
+                    >
+                      <InstagramIcon className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
               </div>
