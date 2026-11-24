@@ -1,0 +1,3 @@
+# Google AdSense Authorized Digital Sellers (ads.txt) for splitpdfs.in
+# When your AdSense account is approved, update "pub-0000000000000000" with your AdSense Publisher ID.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
