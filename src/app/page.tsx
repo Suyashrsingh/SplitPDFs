@@ -27,32 +27,21 @@ import {
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Split PDF Online – Free PDF Splitter (100% Private) | SplitPDFs',
-  description: 'Split PDF pages online for free with SplitPDFs. Extract pages, divide files into separate PDFs, or split by size (25MB for email) with zero cloud uploads. 100% private in-browser tool.',
+  title: 'Split PDF Online – Free PDF Splitter | SplitPDFs',
+  description: 'Split PDF pages online for free. Extract pages, separate files, or split by size (25MB) with zero uploads. 100% private, fast in-browser PDF splitter.',
   keywords: [
     'split pdf',
-    'split pdf online',
     'pdf splitter',
+    'split pdf online',
     'free pdf splitter',
-    'how to split a pdf online',
-    'split pdf pages',
-    'extract pages from pdf',
-    'smallpdf alternative',
-    'lightpdf alternative',
-    'pipefile alternative',
-    'ilovepdf alternative',
-    'split pdf without uploading',
-    'private pdf splitter',
-    'split pdf by size',
-    'split pdf for email 25mb',
-    'split pdf offline'
+    'extract pages from pdf'
   ],
   alternates: {
     canonical: 'https://splitpdfs.in/',
   },
   openGraph: {
-    title: 'Split PDF Online – Free PDF Splitter (100% Private) | SplitPDFs',
-    description: 'Split PDF pages instantly in your browser. Zero cloud uploads, 100% private WebAssembly processing. No file size limits.',
+    title: 'Split PDF Online – Free PDF Splitter | SplitPDFs',
+    description: 'Split PDF pages online for free. Extract pages, separate files, or split by size (25MB) with zero uploads. 100% private, fast in-browser PDF splitter.',
     url: 'https://splitpdfs.in/',
     siteName: 'SplitPDFs',
     locale: 'en_US',
@@ -60,162 +49,231 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Split PDF Online – Free PDF Splitter (100% Private)',
-    description: 'Split PDF files in seconds with complete privacy. No server uploads, no file size caps, works 100% offline.',
+    title: 'Split PDF Online – Free PDF Splitter | SplitPDFs',
+    description: 'Split PDF pages online for free. Extract pages, separate files, or split by size (25MB) with zero uploads. 100% private, fast in-browser PDF splitter.',
   },
 };
 
 export default function HomePage() {
-  const softwareSchema = {
+  const schemaGraph = {
     '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    'name': 'SplitPDFs - Free Online PDF Splitter',
-    'alternateName': ['SplitPDFs', 'Split PDF', 'SplitPDFs Online', 'Private PDF Splitter'],
-    'url': 'https://splitpdfs.in',
-    'description': 'High-performance, 100% private in-browser PDF manipulation utility. Slices and extracts PDF pages locally via client-side WebAssembly with zero server uploads.',
-    'applicationCategory': 'UtilitiesApplication, BusinessApplication',
-    'operatingSystem': 'Windows, macOS, Linux, Android, iOS (Any Modern Web Browser)',
-    'browserRequirements': 'Requires WebAssembly and JavaScript support. Works in Chrome, Edge, Safari, Firefox, Opera, Brave.',
-    'creator': [
+    '@graph': [
       {
-        '@type': 'Person',
-        'name': 'Mahesh Mailapure',
-        'jobTitle': 'Lead Product & UI/UX Designer',
-        'url': 'https://splitpdfs.in/about'
+        '@type': 'WebSite',
+        '@id': 'https://splitpdfs.in/#website',
+        'url': 'https://splitpdfs.in',
+        'name': 'SplitPDFs',
+        'description': 'Free, 100% private in-browser PDF splitter utility powered by WebAssembly.',
+        'publisher': {
+          '@id': 'https://splitpdfs.in/#organization'
+        },
+        'inLanguage': 'en-US'
       },
       {
-        '@type': 'Person',
-        'name': 'Suyash Singh',
-        'jobTitle': 'Lead Systems & WebAssembly Engineer',
-        'url': 'https://splitpdfs.in/about',
+        '@type': 'Organization',
+        '@id': 'https://splitpdfs.in/#organization',
+        'name': 'SplitPDFs',
+        'url': 'https://splitpdfs.in',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://splitpdfs.in/icon.png',
+          'width': 512,
+          'height': 512
+        },
+        'founder': [
+          {
+            '@type': 'Person',
+            'name': 'Mahesh Mailapure',
+            'jobTitle': 'Lead Product & UI/UX Designer',
+            'url': 'https://splitpdfs.in/about'
+          },
+          {
+            '@type': 'Person',
+            'name': 'Suyash Singh',
+            'jobTitle': 'Lead Systems & WebAssembly Engineer',
+            'url': 'https://splitpdfs.in/about',
+            'sameAs': [
+              'https://github.com/Suyashrsingh',
+              'https://www.linkedin.com/in/suyash-rishi-singh-6bb18b289',
+              'https://www.instagram.com/suyashsingh08'
+            ]
+          }
+        ],
         'sameAs': [
           'https://github.com/Suyashrsingh',
           'https://www.linkedin.com/in/suyash-rishi-singh-6bb18b289',
           'https://www.instagram.com/suyashsingh08'
         ]
-      }
-    ],
-    'offers': {
-      '@type': 'Offer',
-      'price': '0',
-      'priceCurrency': 'USD',
-      'availability': 'https://schema.org/InStock'
-    },
-    'aggregateRating': {
-      '@type': 'AggregateRating',
-      'ratingValue': '4.9',
-      'reviewCount': '1480',
-      'bestRating': '5',
-      'worstRating': '1'
-    },
-    'featureList': [
-      '100% Client-Side WebAssembly Processing (Zero Cloud Uploads)',
-      'Visual Thumbnail Grid Pagination',
-      'Split by Custom Page Ranges (e.g. 1-5, 8, 12-14)',
-      'Split Every Page into Individual 1-Page PDFs',
-      'Split by Target File Size (25MB Email Chunks for Gmail/Outlook)',
-      'Split Every N Pages (Equal Interval Slicing)',
-      '100% Offline Execution (Works without active Internet)',
-      'Zero File Size Limits (Processes 500MB+ documents)',
-      'No Watermarks, No Sign-up, 100% Free Forever'
-    ]
-  };
-
-  const howToSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    'name': 'How to Split a PDF Online',
-    'description': 'Step-by-step instructions to split a PDF online into multiple files or extract pages with complete privacy using SplitPDFs.',
-    'totalTime': 'PT30S',
-    'tool': [
-      {
-        '@type': 'HowToTool',
-        'name': 'SplitPDFs Free In-Browser PDF Splitter (https://splitpdfs.in)'
-      }
-    ],
-    'step': [
-      {
-        '@type': 'HowToStep',
-        'position': 1,
-        'name': 'Open an Online PDF Splitter',
-        'text': 'Open SplitPDFs (https://splitpdfs.in) in any web browser on your computer or mobile phone.',
-        'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
       },
       {
-        '@type': 'HowToStep',
-        'position': 2,
-        'name': 'Upload or Drag and Drop Your PDF File',
-        'text': 'Drag and drop your PDF document into the tool. Your file is read locally into browser memory via WebAssembly without uploading to any remote server.',
-        'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+        '@type': 'WebApplication',
+        '@id': 'https://splitpdfs.in/#webapp',
+        'name': 'SplitPDFs - Free Online PDF Splitter',
+        'alternateName': ['SplitPDFs', 'Split PDF', 'SplitPDFs Online', 'Private PDF Splitter'],
+        'url': 'https://splitpdfs.in',
+        'description': 'High-performance, 100% private in-browser PDF manipulation utility. Slices and extracts PDF pages locally via client-side WebAssembly with zero server uploads.',
+        'applicationCategory': 'UtilitiesApplication, BusinessApplication',
+        'operatingSystem': 'Windows, macOS, Linux, Android, iOS (Any Modern Web Browser)',
+        'browserRequirements': 'Requires WebAssembly and JavaScript support. Works in Chrome, Edge, Safari, Firefox, Opera, Brave.',
+        'softwareVersion': '2.0.0',
+        'screenshot': 'https://splitpdfs.in/og-image.png',
+        'inLanguage': 'en-US',
+        'isAccessibleForFree': true,
+        'publisher': {
+          '@id': 'https://splitpdfs.in/#organization'
+        },
+        'creator': [
+          {
+            '@type': 'Person',
+            'name': 'Mahesh Mailapure',
+            'jobTitle': 'Lead Product & UI/UX Designer',
+            'url': 'https://splitpdfs.in/about'
+          },
+          {
+            '@type': 'Person',
+            'name': 'Suyash Singh',
+            'jobTitle': 'Lead Systems & WebAssembly Engineer',
+            'url': 'https://splitpdfs.in/about',
+            'sameAs': [
+              'https://github.com/Suyashrsingh',
+              'https://www.linkedin.com/in/suyash-rishi-singh-6bb18b289',
+              'https://www.instagram.com/suyashsingh08'
+            ]
+          }
+        ],
+        'offers': {
+          '@type': 'Offer',
+          'price': '0',
+          'priceCurrency': 'USD',
+          'availability': 'https://schema.org/InStock'
+        },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'reviewCount': '1480',
+          'bestRating': '5',
+          'worstRating': '1'
+        },
+        'featureList': [
+          '100% Client-Side WebAssembly Processing (Zero Cloud Uploads)',
+          'Visual Thumbnail Grid Pagination',
+          'Split by Custom Page Ranges (e.g. 1-5, 8, 12-14)',
+          'Split Every Page into Individual 1-Page PDFs',
+          'Split by Target File Size (25MB Email Chunks for Gmail/Outlook)',
+          'Split Every N Pages (Equal Interval Slicing)',
+          '100% Offline Execution (Works without active Internet)',
+          'Zero File Size Limits (Processes 500MB+ documents)',
+          'No Watermarks, No Sign-up, 100% Free Forever'
+        ]
       },
       {
-        '@type': 'HowToStep',
-        'position': 3,
-        'name': 'Choose Where to Split',
-        'text': 'Select pages visually using page thumbnails, enter page ranges (e.g. 1-3, 5), choose individual 1-page files, or split by file size (under 25MB for email).',
-        'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+        '@type': 'BreadcrumbList',
+        '@id': 'https://splitpdfs.in/#breadcrumb',
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://splitpdfs.in'
+          }
+        ]
       },
       {
-        '@type': 'HowToStep',
-        'position': 4,
-        'name': 'Click Split and Download',
-        'text': 'Click "Split PDF Now" to slice the binary stream locally and instantly download your new PDF files or ZIP archive with zero watermarks and no sign-up.',
-        'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
-      }
-    ]
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': [
-      {
-        '@type': 'Question',
-        'name': 'How to split a PDF online?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'You can split a PDF online using SplitPDFs (https://splitpdfs.in) in 4 simple steps: 1. Open SplitPDFs in your browser. 2. Drag and drop your PDF file (processed locally in memory without cloud uploads). 3. Choose where to split by selecting page thumbnails, entering page ranges, or choosing 25MB file size chunking. 4. Click "Split PDF Now" to download your divided PDF files or ZIP archive instantly.'
-        }
+        '@type': 'HowTo',
+        '@id': 'https://splitpdfs.in/#howto',
+        'name': 'How to Split a PDF Online',
+        'description': 'Step-by-step instructions to split a PDF online into multiple files or extract pages with complete privacy using SplitPDFs.',
+        'totalTime': 'PT30S',
+        'tool': [
+          {
+            '@type': 'HowToTool',
+            'name': 'SplitPDFs Free In-Browser PDF Splitter (https://splitpdfs.in)'
+          }
+        ],
+        'step': [
+          {
+            '@type': 'HowToStep',
+            'position': 1,
+            'name': 'Open an Online PDF Splitter',
+            'text': 'Open SplitPDFs (https://splitpdfs.in) in any web browser on your computer or mobile phone.',
+            'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 2,
+            'name': 'Upload or Drag and Drop Your PDF File',
+            'text': 'Drag and drop your PDF document into the tool. Your file is read locally into browser memory via WebAssembly without uploading to any remote server.',
+            'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 3,
+            'name': 'Choose Where to Split',
+            'text': 'Select pages visually using page thumbnails, enter page ranges (e.g. 1-3, 5), choose individual 1-page files, or split by file size (under 25MB for email).',
+            'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+          },
+          {
+            '@type': 'HowToStep',
+            'position': 4,
+            'name': 'Click Split and Download',
+            'text': 'Click "Split PDF Now" to slice the binary stream locally and instantly download your new PDF files or ZIP archive with zero watermarks and no sign-up.',
+            'url': 'https://splitpdfs.in/#how-to-split-pdf-online'
+          }
+        ]
       },
       {
-        '@type': 'Question',
-        'name': 'Which is the best free online PDF splitter without limits?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'SplitPDFs is the top-rated free online PDF splitter because it has no file size limits, no daily task restrictions, no account registration, and zero watermarks. Unlike Smallpdf (capped at 2 tasks/day) or iLovePDF (100MB free limit), SplitPDFs can process 500MB+ documents entirely inside your browser for free.'
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Why is SplitPDFs safer than Smallpdf, LightPDF, Pipefile, or iLovePDF?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Traditional online PDF converters (such as Smallpdf, LightPDF, Pipefile, and iLovePDF) require you to upload your confidential files across the internet to their remote cloud servers, where your data is stored for up to 2 hours. SplitPDFs executes 100% of the document parsing and slicing locally inside your device RAM using WebAssembly. No files ever leave your device, ensuring complete privacy for legal, financial, and medical documents.'
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'How do I split a PDF into 25MB parts for Gmail and Outlook?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Select our "Split by Size" mode and choose the 25MB preset. The tool calculates cumulative byte weights across pages and automatically groups consecutive pages into separate PDF files that fit safely inside Gmail and Outlook email attachment limits.'
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Can I split a PDF while disconnected from the internet (offline)?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'Yes. Once the SplitPDFs web page is loaded, all WebAssembly binaries and slicing logic reside locally in your browser cache. You can turn off Wi-Fi or enable Airplane Mode, and SplitPDFs will continue to split, extract, and zip documents flawlessly.'
-        }
-      },
-      {
-        '@type': 'Question',
-        'name': 'Does SplitPDFs leave any watermark or reduce document quality?',
-        'acceptedAnswer': {
-          '@type': 'Answer',
-          'text': 'No. Exported PDFs maintain identical vector typography, embedded high-resolution images, and color fidelity to the original. We never add watermarks, advertisements, or stamps to your documents.'
-        }
+        '@type': 'FAQPage',
+        '@id': 'https://splitpdfs.in/#faq',
+        'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'How to split a PDF online?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'You can split a PDF online using SplitPDFs (https://splitpdfs.in) in 4 simple steps: 1. Open SplitPDFs in your browser. 2. Drag and drop your PDF file (processed locally in memory without cloud uploads). 3. Choose where to split by selecting page thumbnails, entering page ranges, or choosing 25MB file size chunking. 4. Click "Split PDF Now" to download your divided PDF files or ZIP archive instantly.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which is the best free online PDF splitter without limits?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SplitPDFs is the top-rated free online PDF splitter because it has no file size limits, no daily task restrictions, no account registration, and zero watermarks. Unlike Smallpdf (capped at 2 tasks/day) or iLovePDF (100MB free limit), SplitPDFs can process 500MB+ documents entirely inside your browser for free.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Why is SplitPDFs safer than Smallpdf, LightPDF, Pipefile, or iLovePDF?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Traditional online PDF converters (such as Smallpdf, LightPDF, Pipefile, and iLovePDF) require you to upload your confidential files across the internet to their remote cloud servers, where your data is stored for up to 2 hours. SplitPDFs executes 100% of the document parsing and slicing locally inside your device RAM using WebAssembly. No files ever leave your device, ensuring complete privacy for legal, financial, and medical documents.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I split a PDF into 25MB parts for Gmail and Outlook?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Select our "Split by Size" mode and choose the 25MB preset. The tool calculates cumulative byte weights across pages and automatically groups consecutive pages into separate PDF files that fit safely inside Gmail and Outlook email attachment limits.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I split a PDF while disconnected from the internet (offline)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Once the SplitPDFs web page is loaded, all WebAssembly binaries and slicing logic reside locally in your browser cache. You can turn off Wi-Fi or enable Airplane Mode, and SplitPDFs will continue to split, extract, and zip documents flawlessly.'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does SplitPDFs leave any watermark or reduce document quality?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Exported PDFs maintain identical vector typography, embedded high-resolution images, and color fidelity to the original. We never add watermarks, advertisements, or stamps to your documents.'
+            }
+          }
+        ]
       }
     ]
   };
@@ -225,15 +283,7 @@ export default function HomePage() {
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
 
       {/* Hero Section */}

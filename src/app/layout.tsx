@@ -19,10 +19,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://splitpdfs.in'),
   title: {
-    default: 'SplitPDFs – Fast, 100% Private In-Browser PDF Splitter',
+    default: 'Split PDF Online – Free PDF Splitter | SplitPDFs',
     template: '%s | SplitPDFs',
   },
-  description: 'Split, extract, and divide PDF pages in seconds directly in your browser. Designed by Mahesh Mailapure, Developed by Suyash Singh. Zero server uploads, no sign-up, no limits.',
+  description: 'Split PDF pages online for free. Extract pages, separate files, or split by size (25MB) with zero uploads. 100% private, fast in-browser PDF splitter.',
   authors: [
     { name: 'Mahesh Mailapure', url: 'https://splitpdfs.in/about' },
     { name: 'Suyash Singh', url: 'https://splitpdfs.in/about' },
