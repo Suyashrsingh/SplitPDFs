@@ -78,6 +78,8 @@ export default function RootLayout({
     >
       <head>
         {/* Favicons & Mobile Touch Icons (Google Search & Browsers) */}
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="48x48" />
         <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
