@@ -87,6 +87,8 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/icon.svg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs Manifest" />
         <meta name="theme-color" content="#4f46e5" />
 
         {/* Google Tag Manager */}

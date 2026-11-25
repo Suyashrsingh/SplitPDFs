@@ -5,60 +5,60 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://splitpdfs.in';
-  const buildDate = new Date('2026-11-24T00:00:00.000Z');
+  const currentDate = new Date().toISOString();
 
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
       url: `${baseUrl}/split-by-size`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/extract-pages`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/split-every-n-pages`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: buildDate,
+      lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: buildDate,
+    lastModified: currentDate,
     changeFrequency: 'monthly',
     priority: 0.85,
   }));
